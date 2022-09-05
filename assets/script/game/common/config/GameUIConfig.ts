@@ -64,7 +64,7 @@ export enum UIID {
 
 /** 打开界面方式的配置数据 */
 export var UIConfigData: { [key: number]: UIConfig } = {
-    [UIID.Loading]: { layer: LayerType.UI, prefab: "loading/prefab/loading" },
+    [UIID.Loading]: { layer: LayerType.UI, prefab: "gui/loading/loading" },
     [UIID.Netinstable]: { layer: LayerType.PopUp, prefab: "common/prefab/netinstable" },
     [UIID.Window]: { layer: LayerType.Dialog, prefab: "common/prefab/window" },
     [UIID.Demo_Gate]: { layer: LayerType.UI, prefab: "gui/gate/game_login" },
