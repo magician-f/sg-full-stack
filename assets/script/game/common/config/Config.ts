@@ -25,27 +25,23 @@ export class Config {
     public query!: GameQueryConfig;
 
     public init(callback: Function) {
-        let config_name = "config/config";
-        resLoader.load(config_name, JsonAsset, () => {
-            var config = resLoader.get(config_name);
-            this.btc = new BuildTimeConstants();
-            this.query = new GameQueryConfig();
-            this.game = new GameConfig(config);
+        this.btc = new BuildTimeConstants();
+        this.query = new GameQueryConfig();
+        this.game = new GameConfig();
 
-            // 初始化每秒传输帧数
-            game.frameRate = this.game.frameRate;
-            // Http 服务器地址
-            oops.http.server = this.game.httpServer;
-            //  Http 请求超时时间
-            oops.http.timeout = this.game.httpTimeout;
-            // 初始化本地存储加密
-            oops.storage.init(this.game.localDataKey, this.game.localDataIv);
-            // 初始化界面窗口配置
-            oops.gui.init(UIConfigData);
+        // 初始化每秒传输帧数
+        game.frameRate = this.game.frameRate;
+        // Http 服务器地址
+        oops.http.server = this.game.httpServer;
+        //  Http 请求超时时间
+        oops.http.timeout = this.game.httpTimeout;
+        // 初始化本地存储加密
+        oops.storage.init(this.game.localDataKey, this.game.localDataIv);
+        // 初始化界面窗口配置
+        oops.gui.init(UIConfigData);
 
-            callback();
-        })
+        callback();
     }
 }
 
-export const config = new Config()
+export const config = new Config();
