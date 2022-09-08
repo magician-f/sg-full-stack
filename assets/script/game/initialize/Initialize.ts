@@ -5,7 +5,6 @@
  * @LastEditTime: 2022-06-24 21:26:59
  */
 import { ecs } from "../../../../extensions/oops-framework/assets/libs/ecs/ECS";
-import { InitResComp, InitResSystem } from "./bll/InitRes";
 import { LoginSystem } from "./bll/Login";
 import { AccountModelComp } from "./model/AccountModelComp";
 import { GateNetComp } from "./model/GateNetComp";
@@ -20,8 +19,6 @@ export class Initialize extends ecs.Entity {
             GateNetComp,
             AccountModelComp);
 
-        // 初始化游戏公共资源
-        this.add(InitResComp);
     }
 }
 
@@ -29,7 +26,6 @@ export class EcsInitializeSystem extends ecs.System {
     constructor() {
         super();
 
-        this.add(new InitResSystem());
         this.add(new LoginSystem());
     }
 }

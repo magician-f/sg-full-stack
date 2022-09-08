@@ -69,7 +69,7 @@ export var UIConfigData: { [key: number]: UIConfig } = {
     [UIID.Window]: { layer: LayerType.Dialog, prefab: "common/prefab/window" },
     [UIID.Demo_Gate]: { layer: LayerType.UI, prefab: "gui/gate/game_login" },
     [UIID.Demo_Role_Controller]: { layer: LayerType.UI, prefab: "gui/game/role_controller" },
-    [UIID.Demo_Match]: { layer: LayerType.UI, prefab: "gui/match/match" },
+    [UIID.Demo_Match]: { layer: LayerType.UI, prefab: "gui/match/Layer_RoomMatch" },
     [UIID.Demo_ChatTextFromSelf]: { layer: LayerType.UI, prefab: "gui/game/singleChatFromSelf" },
     [UIID.Demo_ChatTextFromOthers]: { layer: LayerType.UI, prefab: "gui/game/singleChatFromOthers" },
     [UIID.Demo_bountyDashboard]: { layer: LayerType.UI, prefab: "gui/game/bountydashboard" },

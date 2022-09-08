@@ -22,8 +22,8 @@ import { RoomListItem } from './RoomListItem';
 
 const { ccclass, property } = _decorator;
 
-@ccclass('RoomMatch')
-export class RoomMatch extends GameComponent {
+@ccclass('Layer_RoomMatch')
+export class Layer_RoomMatch extends GameComponent {
     @property(EditBox)
     inputNickname!: EditBox;
     @property(ScrollView)
